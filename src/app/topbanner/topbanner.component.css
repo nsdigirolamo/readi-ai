@@ -1,0 +1,13 @@
+.jumbotron {
+    background-color: #7fb3d9;
+    color: #7e7f7f;
+    padding: 25px; 
+  }
+  
+  .jumbotron h1 {
+    font-size: 48px; 
+  }
+  
+  .jumbotron p {
+    font-size: 20px; 
+  }
