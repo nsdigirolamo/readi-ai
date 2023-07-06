@@ -1,0 +1,32 @@
+<div class="card mx-5" style="height: 500px">
+    <div class="card-header">Chat with Bot</div>
+    <div class="card-body overflow-scroll" >
+        <div *ngFor="let question of questions; let i = index">
+            <div class="d-flex flex-row justify-content-start mb-4">
+                <div class="d-flex flex-row justify-content-start w-75">
+                    <div class="p-3 ms-3 border border-primary rounded">
+                        {{ question }}
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end mb-4">
+                <div class="d-flex flex-row justify-content-end w-75 ">
+                    <div class="p-3 ms-3 border border-secondary rounded">
+                        {{ answers[i] }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form>
+    <div class="form-group mx-5 mt-3">
+        <input 
+            type="sendMessage" 
+            class="form-control"
+            id="sendMessage" 
+            aria-describedby="sendMessageHelp" 
+            placeholder="Send a Message"
+        >
+    </div>
+</form>
