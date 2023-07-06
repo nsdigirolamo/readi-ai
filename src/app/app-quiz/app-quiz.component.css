@@ -1,0 +1,7 @@
+ul.quiz {
+    list-style: square;
+}
+
+ul.choices{
+    list-style: none;
+}
