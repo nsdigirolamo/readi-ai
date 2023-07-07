@@ -4,4 +4,5 @@ ul.quiz {
 
 ul.choices{
     list-style: none;
+    text-align: left;
 }
