@@ -4,9 +4,13 @@ import openai
 import creds
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 app = FastAPI()
 openai.api_key = creds.OPENAI_API_KEY
 conversation = []
+
+class Item(BaseModel):
+    message: str
 
 
 app.add_middleware(
@@ -20,8 +24,9 @@ app.add_middleware(
 )
 
 @app.post("/ask_question/")
-async def ask_question(request: Request):
-    return "test!"
+async def ask_question(item: Item):
+    print(item.json())
+    return item.json() # Important! Need to return as json
 
 def baseCaseTry(message):
     global conversation
