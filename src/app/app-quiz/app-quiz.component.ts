@@ -13,18 +13,6 @@ export class AppQuizComponent {
     this.isButtonClicked[index] = !this.isButtonClicked[index];
   }
 
-  getButtonStyle(index: number) {
-    if (this.isButtonClicked[index]) {
-
-        return { 'background-color': 'red' };
-      
-    }
-    else {
-      return { 'background-color': 'red' };
-    }
-    return null;
-  }
-
 }
 
 

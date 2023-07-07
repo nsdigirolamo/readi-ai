@@ -4,8 +4,12 @@ ul.quiz {
 
 ul.choices{
     list-style: none;
-
+    text-align: left;
 }
+.font-italic{
+    font-style: italic !important;
+}
+
 
 .btn {
     /* Add styles for the default state */
@@ -28,4 +32,3 @@ ul.choices{
     background-color: green; /* Color for Button 2 */
   }
   
-
