@@ -6,6 +6,8 @@ import { AppQuizComponent } from './app-quiz/app-quiz.component';
 import { TopbannerComponent } from './topbanner/topbanner.component';
 import { ChatboxComponent } from './chatbox/chatbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
+import { HttpService } from './services/http.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

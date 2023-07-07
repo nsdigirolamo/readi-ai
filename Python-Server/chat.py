@@ -21,7 +21,7 @@ app.add_middleware(
 
 @app.post("/ask_question/")
 async def ask_question(request: Request):
-    pass
+    return "test!"
 
 def baseCaseTry(message):
     global conversation
