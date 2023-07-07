@@ -28,13 +28,19 @@
       <h4>What should you have said to Illumin-AI-te instead?</h4>
       <ul class="choices">
         <li>
-          <label><input type="radio" name="question0" value="A" /><span> Blue</span></label>
+          <button class="btn button1" [class.active]="isButtonClicked[0]" (click)="toggleButton(0)">
+            Blue
+          </button>
         </li>
         <li>
-          <label><input type="radio" name="question0" value="B" /><span> My favorite color is blue</span></label>
+         <button class="btn button2" [class.active]="isButtonClicked[1]" (click)="toggleButton(1)">
+          My favorite color is blue
+        </button>
         </li>
         <li>
-          <label><input type="radio" name="question0" value="C" /><span> Purple</span></label>
+          <button class="btn button3" [class.active]="isButtonClicked[2]" (click)="toggleButton(2)">
+            Purple
+          </button>
         </li>
       </ul>
   </div>
@@ -64,10 +70,14 @@
       <h4>What should you have said to IlluminAIte instead?</h4>
       <ul class="choices">
         <li>
-          <label><input type="radio" name="question0" value="A" /><span> I don't know how algebra works, can you teach me?</span></label>
+          <button class="btn button4" [class.active]="isButtonClicked[3]" (click)="toggleButton(3)">
+            I don't know how Algebra works. Can you teach me?
+          </button>
         </li>
         <li>
-          <label><input type="radio" name="question0" value="B" /><span> Do my homework for me</span></label>
+          <button class="btn button5" [class.active]="isButtonClicked[4]" (click)="toggleButton(4)">
+            Do my homework for me
+          </button>
       </ul>
 
 
