@@ -6,3 +6,6 @@ ul.choices{
     list-style: none;
     text-align: left;
 }
+.font-italic{
+    font-style: italic !important;
+}
