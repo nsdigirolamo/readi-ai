@@ -9,6 +9,7 @@ ul.choices{
 .font-italic{
     font-style: italic !important;
 }
+<<<<<<< HEAD
 
 
 .btn {
@@ -32,3 +33,10 @@ ul.choices{
     background-color: green; /* Color for Button 2 */
   }
   
+=======
+.spacer::before {
+    content: "";
+    display: block;
+    height: 10px;
+  }
+>>>>>>> d3dbd6c19da83655f70d768e82e08aeb31f6db5e
