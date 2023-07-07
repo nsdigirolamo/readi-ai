@@ -11,6 +11,7 @@ conversation = []
 
 class Item(BaseModel):
     message: str
+    response:str
 
 
 app.add_middleware(
@@ -25,23 +26,16 @@ app.add_middleware(
 
 @app.post("/ask_question/")
 async def ask_question(item: Item):
-    print(item.json())
-    return item.json() # Important! Need to return as json
+     print(item.message)
+     baseCaseTry(item.message)
+     return item.json
 
 def baseCaseTry(message):
     global conversation
-
-    name = input("Enter your name: ")
-    grade = input("Enter what grade you are in: ")
-    chat_now = input("Enter a question: ")
-
-    print("Name:", name)
-    print("Grade:", grade)
-    print("Question:", chat_now)
-
-    result = name + " said " + chat_now
+    chat_now = message
+    result = chat_now
     conversation.append({'role': 'user', 'content': result})
-    openai_answer()
+    return openai_answer()
 
 def openai_answer():
     global conversation
@@ -87,7 +81,9 @@ def openai_answer():
     with open("conversation.json", "w", encoding="utf-8") as f:
         json.dump({"history": history}, f, indent=4)
 
-    return message
+    Item.response = message
+
+    return Item.response
 
 
 def main():
