@@ -104,12 +104,17 @@
       </h4>
       <ul class="choices">
         <li>
-          <label><input type="radio" name="question0" value="A" /><span>"Can you write an essay on the topic of climate change?"</span></label>
+          <button class="btn button6" [class.active]="isButtonClicked[5]" (click)="toggleButton(5)">
+            Can you write an essay on the topic of climate change?
+          </button>
         </li>
-          <label><input type="radio" name="question0" value="B" /><span>"Please provide a detailed analysis of the causes, impacts, and potential solutions for climate change."
-          </span></label>
-          <li>
-            <label><input type="radio" name="question0" value="A" /><span>"Tell me everything you know about climate change."</span></label>
+        <button class="btn button7" [class.active]="isButtonClicked[6]" (click)="toggleButton(6)">
+          Please provide a detailed analysis of the causes, impacts, and potential solutions for climate change
+        </button>
+        <li>
+          <button class="btn button8" [class.active]="isButtonClicked[7]" (click)="toggleButton(7)">
+            Tell me everything you know about climate change.          
+          </button>
           </li>
       </ul>
 </div>
@@ -120,12 +125,17 @@
       </h4>
       <ul class="choices">
         <li>
-          <label><input type="radio" name="question0" value="A" /><span>Be concise and specific in your request.</span></label>
+          <button class="btn button9" [class.active]="isButtonClicked[8]" (click)="toggleButton(8)">
+            Be concise and specific in your request.          
+          </button>
         </li>
-          <label><input type="radio" name="question0" value="B" /><span>Use ambiguous language and vague terms.
-          </span></label>
+        <button class="btn button10" [class.active]="isButtonClicked[9]" (click)="toggleButton(9)">
+          Use ambiguous language and vague terms.          
+        </button>
           <li>
-            <label><input type="radio" name="question0" value="A" /><span>Repeat the same question multiple times in different ways.</span></label>
+            <button class="btn button11" [class.active]="isButtonClicked[10]" (click)="toggleButton(10)">
+              Repeat the same question multiple times in different ways.         
+            </button>
           </li>
       </ul>
 </div>
@@ -136,12 +146,17 @@
       </h4>
       <ul class="choices">
         <li>
-          <label><input type="radio" name="question0" value="A" /><span>To help AI understand the specific task or question.</span></label>
+          <button class="btn button12" [class.active]="isButtonClicked[11]" (click)="toggleButton(11)">
+            To help AI understand the specific task or question.         
+          </button>
         </li>
-          <label><input type="radio" name="question0" value="B" /><span>To confuse the AI and make the prompt more challenging.
-          </span></label>
-          <li>
-            <label><input type="radio" name="question0" value="A" /><span>To demonstrate your writing skills to the AI.</span></label>
+          <button class="btn button13" [class.active]="isButtonClicked[12]" (click)="toggleButton(12)">
+            To confuse the AI and make the prompt more challenging.         
+          </button>
+        <li>
+            <button class="btn button14" [class.active]="isButtonClicked[13]" (click)="toggleButton(13)">
+              To demonstrate your writing skills to the AI.     
+            </button>
           </li>
       </ul>
 </div>

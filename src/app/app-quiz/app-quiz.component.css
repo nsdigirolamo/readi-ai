@@ -9,7 +9,6 @@ ul.choices{
 .font-italic{
     font-style: italic !important;
 }
-<<<<<<< HEAD
 
 
 .btn {
@@ -25,18 +24,16 @@ ul.choices{
     margin-right: 0; /* Remove right margin for the last button */
   }
   
-  .btn.active.button1, .btn.active.button3, .btn.active.button5 {
+  .btn.active.button1, .btn.active.button3, .btn.active.button5, .btn.active.button6, .btn.active.button8, .btn.active.button10, .btn.active.button11, .btn.active.button13, .btn.active.button14 {
     background-color: red; /* Color for Button 1 */
   }
   
-  .btn.active.button2, .btn.active.button4 {
+  .btn.active.button2, .btn.active.button4, .btn.active.button7, .btn.active.button9, .btn.active.button12{
     background-color: green; /* Color for Button 2 */
   }
   
-=======
 .spacer::before {
     content: "";
     display: block;
     height: 10px;
   }
->>>>>>> d3dbd6c19da83655f70d768e82e08aeb31f6db5e
