@@ -29,18 +29,24 @@ export class ChatboxComponent {
     }
     this.sendMessage(message.message);
     this.httpService.post<string>(this.POST_ENDPOINT, message).subscribe(
-      incomingMessage => {console.log("Recieved Response: " + incomingMessage)}
+      incomingMessage => {
+        console.log("Recieved Response: " + incomingMessage)
+        this.recieveMessage(JSON.parse(incomingMessage).message);
+      }
     );
     this.messageForm.reset();
   }
 
   sendMessage(message: string): void {
     this.outgoingMessages.push(message);
-    this.incomingMessages.push("..."); // TODO: Remove me
+    this.incomingMessages.push("...");
     console.log(this.outgoingMessages);
   }
 
-  recieveMessage(message: string): void { }
+  recieveMessage(message: string): void {
+    this.incomingMessages.pop();
+    this.incomingMessages.push("This is a response to " + message);
+  }
 
 }
 
