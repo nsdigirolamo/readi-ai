@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppQuizComponent } from './app-quiz/app-quiz.component';
 import { TopbannerComponent } from './topbanner/topbanner.component';
 import { ChatboxComponent } from './chatbox/chatbox.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { ChatboxComponent } from './chatbox/chatbox.component';
     TopbannerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-chatbox',
@@ -7,30 +8,31 @@ import { Component } from '@angular/core';
 })
 export class ChatboxComponent {
 
-  questions: string[] = [
-    "Test Question 1",
-    "Test Question 2",
-    "Test Question 3",
-    "Test Question 4",
-    "Test Question 5",
-    "Test Question 6"
-  ];
+  messageForm = this.formBuilder.group({
+    message: ''
+  })
 
-  answers: string[] = [
-    "Answer 1",
-    "Answer 2",
-    "Answer 3",
-    "Answer 4",
-    "Answer 5",
-    "Answer 6"
-  ];
+  outgoingMessages: string[] = [];
+  incomingMessages: string[] = [];
+  
+  constructor(
+    private formBuilder: FormBuilder,
+  ) {}
 
-  askQuestion(question: string): void {
-    this.questions.push(question);
+  onSubmit(): void {
+    console.log(this.messageForm.value);
+    this.sendMessage(this.messageForm.value.message!);
+    this.messageForm.reset();
   }
 
-  addAnswer(response: string): void {
-    this.answers.push(response);
+  sendMessage(message: string): void {
+    this.outgoingMessages.push(message);
+    this.incomingMessages.push("..."); // TODO: Remove me
+    console.log(this.outgoingMessages);
+  }
+
+  recieveMessage(message: string): void {
+
   }
 
 }
