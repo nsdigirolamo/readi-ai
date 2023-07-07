@@ -1,6 +1,11 @@
-# ReadiAi
+# IlluminAIte
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+
+This project is made for Bufallo Prep for students and teachers to get introduced to AI bots and how to properly use them.
+Read example chat bot conversations and learn about how to properly chat with an AI for educational purposeses!
+After answering a few basic quiz questions, you can practice with our very own chat bot, IlluminAIte. It is trained to help you learn about using AI!
+
 
 ## Development server
 
