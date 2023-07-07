@@ -9,3 +9,8 @@ ul.choices{
 .font-italic{
     font-style: italic !important;
 }
+.spacer::before {
+    content: "";
+    display: block;
+    height: 10px;
+  }
