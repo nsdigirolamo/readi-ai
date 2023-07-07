@@ -24,8 +24,10 @@ export class ChatboxComponent {
   ) {}
 
   onSubmit(): void {
-    let message: string = this.messageForm.value.message!
-    this.sendMessage(message);
+    let message: Message = {
+      message: this.messageForm.value.message!
+    }
+    this.sendMessage(message.message);
     this.httpService.post<string>(this.POST_ENDPOINT, message).subscribe(
       incomingMessage => {console.log("Recieved Response: " + incomingMessage)}
     );
@@ -38,8 +40,10 @@ export class ChatboxComponent {
     console.log(this.outgoingMessages);
   }
 
-  recieveMessage(message: string): void {
-
-  }
+  recieveMessage(message: string): void { }
 
 }
+
+export interface Message {
+  message: string
+} 
